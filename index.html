@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas Pro- UtiliX</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.svg" />
+
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+<a href="index.html" class="logo">
+  <img src="logo.svg" alt="UtiliX logo" height="40">
+</a>
+      <nav>
+        <ul>
+          <li><a href="#about">Sobre nosotros</a></li>
+          <li><a href="#tasks">Tareas</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li><button id="toggle-theme">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Gestor de Tareas Pro</h2>
+    <p>Organiza tu día, recibe recordatorios y nunca olvides lo importante.</p>
+  </section>
+
+  <!-- FORMULARI DE TASQUES -->
+  <main class="container" id="tasks">
+    <form id="task-form" class="task-form">
+      <input type="text" id="task-input" placeholder="Nueva tarea..." required>
+      <input type="datetime-local" id="task-deadline">
+      <select id="task-priority">
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+      </select>
+      <input type="text" id="task-category" placeholder="Categoría (opcional)">
+      <button type="submit">Añadir</button>
+    </form>
+
+    <!-- FILTRES -->
+    <div class="filters">
+      <input type="text" id="search" placeholder="Buscar tareas...">
+      <select id="filter-priority">
+        <option value="">Todas las prioridades</option>
+        <option value="low">Baja</option>
+        <option value="medium">Media</option>
+        <option value="high">Alta</option>
+      </select>
+      <button id="clear-tasks">Borrar todo</button>
+    </div>
+
+    <!-- LLISTA DE TASQUES -->
+    <ul id="task-list"></ul>
+
+    <!-- EXPORT / IMPORT -->
+    <div class="export-import">
+      <button id="export">Exportar</button>
+      <input type="file" id="import" accept="application/json">
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <p>© 2025 UtiliX - Todos los derechos reservados</p>
+    <a href="cookies.html">Política de cookies</a>
+  </footer>
+
+  <!-- BANNER DE COOKIES -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>Esta web usa cookies para mejorar la experiencia. <a href="cookies.html">Saber más</a></p>
+    <button id="accept-cookies">Aceptar</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
